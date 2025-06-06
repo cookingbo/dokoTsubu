@@ -14,15 +14,20 @@ User loginUser = (User) session.getAttribute("loginUser");
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<jsp:include page="/WEB-INF/jsp/header.jsp" />
-<h1>どこつぶログイン</h1>
-<% if(loginUser != null) { %>
-	<p>ログインに成功しました</p>
-	<p>ようこそ<%= loginUser.getName() %>さん</p>
-	<a href="/docoTsubu/Main">つぶやき投稿・閲覧へ</a>
-<% } else { %>
-	<p>ログインに失敗しました</p>
-	<a href="/docoTsubu/">TOPへ</a>
-<% } %>
+    <jsp:include page="/WEB-INF/jsp/header.jsp" />
+    <main>
+	    <% if(loginUser != null) { %>
+	    	<div class=login-message>
+	        	<h2 class=login-success-message>ログインに成功しました！</h2>
+	        	<h1 class=welcome-message>ようこそ<%= loginUser.getName() %>さん</h1>
+	        	<a href="/docoTsubu/Main" class=mutter-list-button>つぶやき投稿・閲覧へ</a>
+	    	</div>
+	    <% } else { %>
+	    	<div class=login-message>
+		        <h2 class=login-failure-message>ログインに失敗しました</h2>
+		        <a href="/docoTsubu/" class=top-back-button>TOPへ</a>
+	    	</div>
+	    <% } %>
+    </main>
 </body>
 </html>
