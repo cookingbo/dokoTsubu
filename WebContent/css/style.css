@@ -7,6 +7,7 @@
 	box-sizing: border-box;
      }
 
+/* 全画面共通*/
 html, body {
     margin: 0;
     padding: 0;
@@ -21,15 +22,16 @@ header{
 	padding-left: 20px;
 }
 
+main{
+	background-color: #F5F5DC;
+	min-height: 100vh;
+}
+
+/* ログイン画面 */
 .container{
 	text-align:center;
 	line-height: 60px;
 	height: 60px;
-}
-
-main{
-	background-color: #F5F5DC;
-	min-height: 100vh;
 }
 
 .center-text{
@@ -67,6 +69,65 @@ main{
 .login-button{
     width: 80px;
     padding: 5px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 4px;
+    background-color: #E0FFFF;
+    text-decoration: none;
+	color: black;
 }
+
+/* ログイン成功/失敗画面 :*/
+.login-message{
+	text-align:center;
+	line-height: 60px;
+	height: 60px;
+}
+
+/* ログイン成功画面 */
+.login-success-message{
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	margin: 0;
+}
+
+.welcome-message{
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	margin: 0;
+}
+
+.mutter-list-button{
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #E0FFFF;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* ログイン失敗画面 */
+.login-failure-message{
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	margin: 0;
+}
+
+.top-back-button{
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #E0FFFF;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
