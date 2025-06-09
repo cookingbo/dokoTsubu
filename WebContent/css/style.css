@@ -5,7 +5,7 @@
 *{
 	font-family: 'Kosugi', sans-serif;
 	box-sizing: border-box;
-     }
+}
 
 /* 全画面共通*/
 html, body {
@@ -30,8 +30,8 @@ main{
 /* ログイン画面 */
 .container{
 	text-align:center;
-	line-height: 60px;
-	height: 60px;
+	line-height: 120px;
+	height: 120px;
 }
 
 .center-text{
@@ -74,6 +74,18 @@ main{
     background-color: #E0FFFF;
     text-decoration: none;
 	color: black;
+}
+
+/* ログアウト画面*/
+.logout-message{
+	text-align:center;
+	line-height: 60px;
+	height: 60px;
+}
+
+.logout-success-message{
+	text-align: center;
+	margin: 0;
 }
 
 /* ログイン成功/失敗画面 :*/
@@ -124,10 +136,31 @@ main{
   color: black;
 }
 
+/* メイン画面*/
 
 
+.still-login-message{
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	margin: 0;
+}
 
+.mutter-form-container{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
 
+.mutter-form{
+	padding-bottom: 10px;
+}
 
-
+.mutter-text-form{
+	width: 100px;
+    padding: 5px 10px;
+	margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
 

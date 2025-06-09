@@ -8,9 +8,12 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<jsp:include page="/WEB-INF/jsp/header.jsp" />
-<h1>どこつぶログアウト</h1>
-<p>ログアウトしました</p>
-<a href="/docoTsubu/">トップへ</a>
+    <jsp:include page="/WEB-INF/jsp/header.jsp" />
+    <main>
+        <div class="logout-message">
+            <h2 class="logout-success-message">ログアウトしました</h2>
+            <a href="/docoTsubu/" class="top-back-button">トップへ</a>
+        </div>
+    </main>
 </body>
 </html>
