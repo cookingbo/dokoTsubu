@@ -30,8 +30,8 @@ main{
 /* ログイン画面 */
 .container{
 	text-align:center;
-	line-height: 120px;
-	height: 120px;
+	line-height: 60px;
+	height: 60px;
 }
 
 .center-text{
@@ -137,7 +137,11 @@ main{
 }
 
 /* メイン画面*/
-
+.container2{
+	text-align:center;
+	line-height: 120px;
+	height: 120px;
+}
 
 .still-login-message{
 	text-align: center;
@@ -157,10 +161,53 @@ main{
 }
 
 .mutter-text-form{
-	width: 100px;
+	width: 200px;
     padding: 5px 10px;
 	margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
+.mutter-post-button{
+	width: 80px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #E0FFFF;
+    text-decoration: none;
+	color: black;
+}
+
+.button-container{
+	height: 60px;
+	width: 50%;
+	line-height: 60px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.update-button{
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #E0FFFF;
+    text-decoration: none;
+	color: black;
+}
+
+.logout-button{
+	width: 80px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #6633FF;
+    text-decoration: none;
+	color: black;
+}
+
+.mutter-list{
+	width: 50%;
+	padding-top: 10px;
+	margin: 0 auto;
+	text-align: center;
+}
