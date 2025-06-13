@@ -36,12 +36,15 @@ String errorMsg = (String) request.getAttribute("errorMsg");
 		    </div>
 		    <div class=mutter-list>
 		        <% if(errorMsg != null) { %>
-		            <p><%= errorMsg %></p>
+		            <p class=no-mutter><%= errorMsg %></p>
 		        <% } %>
-
 		        <% if (mutterList != null) {%>
 		            <% for(Mutter mutter : mutterList) { %>
-		                <p><%= mutter.getUserName() %>:<%= mutter.getText() %></p>
+		                <div class="mutter-item">
+			                <span class="mutter-username"><%= mutter.getUserName() %></span>
+			                <span class="mutter-separator">:</span>
+			                <span class="mutter-text"><%= mutter.getText() %></span>
+            			</div>
 		            <% } %>
 		        <% } else { %>
 		            <p>つぶやきがありません。</p>

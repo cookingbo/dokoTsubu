@@ -69,11 +69,11 @@ main{
 .login-button{
     width: 80px;
     padding: 5px 10px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 4px;
     background-color: #E0FFFF;
     text-decoration: none;
-	color: black;
+	color: #000000;
 }
 
 /* ログアウト画面*/
@@ -112,11 +112,11 @@ main{
 
 .mutter-list-button{
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #000000;
   background-color: #E0FFFF;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 /* ログイン失敗画面 */
@@ -129,11 +129,11 @@ main{
 
 .top-back-button{
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #000000;
   background-color: #E0FFFF;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 /* メイン画面*/
@@ -171,11 +171,11 @@ main{
 .mutter-post-button{
 	width: 80px;
     padding: 5px 10px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 4px;
     background-color: #E0FFFF;
     text-decoration: none;
-	color: black;
+	color: #000000;
 }
 
 .button-container{
@@ -188,21 +188,21 @@ main{
 
 .update-button{
     padding: 5px 10px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 4px;
     background-color: #E0FFFF;
     text-decoration: none;
-	color: black;
+	color: #000000;
 }
 
 .logout-button{
 	width: 80px;
     padding: 5px 10px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 4px;
-    background-color: #6633FF;
+    background-color: #CCFFCC;
     text-decoration: none;
-	color: black;
+	color: #000000;
 }
 
 .mutter-list{
@@ -210,4 +210,41 @@ main{
 	padding-top: 10px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.no-mutter{
+	color: #FF0000;
+}
+
+/* 各つぶやきアイテムのスタイル */
+.mutter-item {
+    background-color: #FFFFFF; /* つぶやきの背景色を白に */
+    border: 1px solid #DDDDDD; /* 境界線を追加 */
+    border-radius: 5px; /* 角を丸める */
+    padding: 10px 15px; /* 内側の余白 */
+    margin-bottom: 10px; /* 各つぶやきの下に余白 */
+    display: flex; /* Flexboxを使って内容を並べる */
+    align-items: flex-start; /* アイテムの先頭を揃える */
+    flex-wrap: wrap; /* 内容が長い場合に折り返す */
+}
+
+/* ユーザー名のスタイル */
+.mutter-username {
+    font-weight: bold; /* 名前を太字に */
+    color: #337ab7; /* 名前を青色に */
+    margin-right: 5px; /* 名前とコロンの間に少し余白 */
+    white-space: nowrap; /* 名前は改行させない */
+}
+
+/* 区切り文字のスタイル */
+.mutter-separator {
+    margin-right: 5px; /* コロンとテキストの間に少し余白 */
+}
+
+/* つぶやき内容のスタイル */
+.mutter-text {
+    flex-grow: 1; /* 残りのスペースをすべて使用して伸びる */
+    word-wrap: break-word; /* 長い単語でも強制的に改行 */
+    overflow-wrap: break-word; /* より新しいプロパティで長い単語を改行 */
+    text-align: left;
 }
