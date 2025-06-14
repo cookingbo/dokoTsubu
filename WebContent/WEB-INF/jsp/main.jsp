@@ -26,13 +26,12 @@ String errorMsg = (String) request.getAttribute("errorMsg");
 		    </div>
 		    <div class=mutter-form-container>
 		        <form action="/docoTsubu/Main" method="post" class=mutter-form>
-		            <input type="text" name="text" class=mutter-text-form>
+		            <textarea name="text" class=mutter-text-form rows="4" placeholder="つぶやきを入力"></textarea>
 		            <input type="submit" value="つぶやく" class=mutter-post-button>
 		        </form>
 		    </div>
 		    <div class=button-container>
 				<a href="/docoTsubu/Main" class=update-button>更新</a>
-		        <a href="/docoTsubu/Logout" class=logout-button>ログアウト</a>
 		    </div>
 		    <div class=mutter-list>
 		        <% if(errorMsg != null) { %>

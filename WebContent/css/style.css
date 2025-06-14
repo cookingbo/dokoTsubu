@@ -2,74 +2,97 @@
 
 @import url('https://fonts.googleapis.com/css?family=Kosugi');
 
+/* 全要素に共通のスタイル */
 *{
-	font-family: 'Kosugi', sans-serif;
-	box-sizing: border-box;
+    font-family: 'Kosugi', sans-serif;
+    box-sizing: border-box; /* パディングとボーダーを要素の幅と高さに含める */
 }
 
-/* 全画面共通*/
+/* 全画面共通の基本設定 */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100%; /* bodyが画面いっぱいの高さを取るように */
 }
 
+/* ヘッダーのスタイル */
 header{
-	position:fixed;
-	top: 0;
-	left: 0;
-	font-size: 30px;
-	background-color: #E0FFFF;
-	width: 100%;
-	padding: 15px;
-	padding-left: 20px;
-	height: 60px; /* ★ヘッダーの合計の高さ（パディング含む）を明示的に指定 */
-    z-index: 1000; /* ★ヘッダーを他の要素より手前に表示させる */
+    position: fixed; /* 画面上部に固定 */
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    background-color: #E0FFFF;
+    width: 100%;
+    padding: 15px 20px; /* 上下15px, 左右20pxのパディング */
+    height: 60px; /* ヘッダーの固定高さを設定 */
+    z-index: 1000; /* 他の要素より手前に表示 */
+    display: flex; /* Flexboxを有効化 */
+    align-items: center; /* 子要素を垂直方向の中央に揃える */
+    justify-content: space-between; /* 子要素を左右に分離して配置 */
 }
 
+/* サイトタイトルリンクのスタイル */
+.site-title-link{
+    text-decoration: none; /* 下線なし */
+    color: inherit; /* 親要素の色を継承 */
+    cursor: pointer; /* マウスカーソルをポインターに */
+    margin-right: auto; /* 左寄せにし、残りのスペースを右側に確保 */
+}
+
+/* ログアウトボタンのスタイル */
+.logout-button{
+    padding: 5px 10px; /* パディング */
+    border: 1px solid #000000; /* ボーダー */
+    border-radius: 4px; /* 角丸 */
+    background-color: #CCFFCC; /* 背景色 */
+    text-decoration: none; /* 下線なし */
+    color: #000000; /* 文字色 */
+    font-size: 17px;
+    white-space: nowrap; /* テキストの改行を禁止 */
+}
+
+/* メインコンテンツ領域のスタイル */
 main{
-	background-color: #F5F5DC;
-	min-height: 100vh;
-	padding-top: 60px;
+    background-color: #F5F5DC;
+    min-height: 100vh; /* 画面の最小高さを設定 */
+    padding-top: 60px; /* ヘッダーの高さ分、上部に余白を確保 */
 }
 
-/* ログイン画面 */
+/* ログイン画面共通のスタイル */
 .container{
-	text-align:center;
-	line-height: 60px;
-	height: 60px;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
 }
 
 .center-text{
-	text-align: center;
-	line-height: 60px;
-	height: 60px;
-	margin: 0;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    margin: 0;
 }
 
 .login-form-container{
-	width: 50%;
-	margin: 0 auto;
-	text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .login-form{
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
-.login-user-form{
-    width: 100px;
-    padding: 5px 10px;
-	margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
+/* ログインフォームの入力フィールド共通スタイル */
+.login-user-form,
 .login-password-form {
     width: 100px;
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+.login-user-form{
+    margin-top: 10px; /* 上部のマージン */
 }
 
 .login-button{
@@ -79,147 +102,154 @@ main{
     border-radius: 4px;
     background-color: #E0FFFF;
     text-decoration: none;
-	color: #000000;
+    color: #000000;
 }
 
-/* ログアウト画面*/
+/* ログアウト画面のスタイル */
 .logout-message{
-	text-align:center;
-	line-height: 60px;
-	height: 60px;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
 }
 
 .logout-success-message{
-	text-align: center;
-	margin: 0;
+    text-align: center;
+    margin: 0;
 }
 
-/* ログイン成功/失敗画面 :*/
+/* ログイン成功/失敗画面共通のスタイル */
 .login-message{
-	text-align:center;
-	line-height: 60px;
-	height: 60px;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
 }
 
-/* ログイン成功画面 */
+/* ログイン成功画面のスタイル */
 .login-success-message{
-	text-align: center;
-	line-height: 60px;
-	height: 60px;
-	margin: 0;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    margin: 0;
 }
 
 .welcome-message{
-	text-align: center;
-	line-height: 60px;
-	height: 60px;
-	margin: 0;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    margin: 0;
 }
 
 .mutter-list-button{
-  border-radius: 5px;
-  border: 1px solid #000000;
-  background-color: #E0FFFF;
-  padding: 10px;
-  text-decoration: none;
-  color: #000000;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #E0FFFF;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
 }
 
-/* ログイン失敗画面 */
+/* ログイン失敗画面のスタイル */
 .login-failure-message{
-	text-align: center;
-	line-height: 60px;
-	height: 60px;
-	margin: 0;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    margin: 0;
 }
 
 .top-back-button{
-  border-radius: 5px;
-  border: 1px solid #000000;
-  background-color: #E0FFFF;
-  padding: 10px;
-  text-decoration: none;
-  color: #000000;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #E0FFFF;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
 }
 
-/* メイン画面*/
+/* メイン画面のスタイル */
 .container2{
-	text-align:center;
-	line-height: 120px;
-	height: 120px;
+    text-align: center;
+    line-height: 120px;
+    height: 120px;
 }
 
 .still-login-message{
-	text-align: center;
-	line-height: 60px;
-	height: 60px;
-	margin: 0;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    margin: 0;
 }
 
 .mutter-form-container{
-	width: 50%;
-	margin: 0 auto;
-	text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .mutter-form{
-	padding-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex; /* Flexboxを有効化 */
+    align-items: flex-end; /* 子要素を下揃えにする */
+    justify-content: center; /* フォーム全体を水平方向の中央に配置 */
+    gap: 10px; /* テキストエリアとボタンの間にスペースを確保 */
 }
 
 .mutter-text-form{
-	width: 200px;
+    width: 200px;
     padding: 5px 10px;
-	margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    min-height: 60px; /* 最小高さを確保しつつ、内容に応じて高さを自動調整 */
+    resize: vertical; /* ユーザーが縦方向にリサイズできるようにする */
+    overflow-y: auto; /* 内容が多ければ縦スクロールバーを表示 */
 }
 
 .mutter-post-button{
-	width: 80px;
+    width: 80px;
     padding: 5px 10px;
     border: 1px solid #000000;
     border-radius: 4px;
     background-color: #E0FFFF;
     text-decoration: none;
-	color: #000000;
+    color: #000000;
 }
 
 .button-container{
-	height: 60px;
-	width: 50%;
-	line-height: 60px;
-	margin: 0 auto;
-	text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: right;
+    /* height/line-height は中の要素に合わせて調整が必要な場合があります */
 }
 
 .update-button{
-    padding: 5px 10px;
+    /* update-button がアイコンになる場合を想定して調整 */
+    padding: 5px 10px; /* 必要に応じて調整 */
     border: 1px solid #000000;
     border-radius: 4px;
     background-color: #E0FFFF;
     text-decoration: none;
-	color: #000000;
+    color: #000000;
+    display: inline-flex; /* アイコンを中央に配置する場合などに便利 */
+    align-items: center;
+    justify-content: center;
+    /* font-size: 0; line-height: 0; はテキストがない場合に推奨 */
 }
 
-.logout-button{
-	width: 80px;
-    padding: 5px 10px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    background-color: #CCFFCC;
-    text-decoration: none;
-	color: #000000;
+/* 更新アイコンのスタイル */
+.update-icon {
+    width: 30px; /* アイコンの幅 */
+    height: 30px; /* アイコンの高さ */
+    vertical-align: middle; /* 垂直方向の配置調整 */
 }
 
 .mutter-list{
-	width: 50%;
-	padding-top: 10px;
-	margin: 0 auto;
-	text-align: center;
+    width: 50%;
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .no-mutter{
-	color: #FF0000;
+    color: #FF0000;
 }
 
 /* 各つぶやきアイテムのスタイル */
@@ -253,4 +283,29 @@ main{
     word-wrap: break-word; /* 長い単語でも強制的に改行 */
     overflow-wrap: break-word; /* より新しいプロパティで長い単語を改行 */
     text-align: left; /*つぶやきを左揃えに*/
+}
+
+/* --- ボタンの共通スタイルとアクティブ時のアクション --- */
+/* 全てのボタンに適用する基本スタイル */
+.mutter-post-button,
+.update-button,
+.logout-button,
+.login-button,
+.mutter-list-button,
+.top-back-button {
+    cursor: pointer; /* クリック可能であることを示す */
+    transition: all 0.1s ease-out; /* 変化を滑らかにする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 初期状態の影 */
+}
+
+/* ボタンが押されたときのアクション (凹んだように見せる) */
+.mutter-post-button:active,
+.update-button:active,
+.logout-button:active,
+.login-button:active,
+.mutter-list-button:active,
+.top-back-button:active {
+    transform: translateY(2px); /* 下に2px移動させて凹んだように見せる */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* 影を小さくして、凹んだ感を強調 */
+    /* background-color: #C0E0FF; を有効にすると、押されたときに背景色も変わります */
 }

@@ -25,7 +25,7 @@ User loginUser = (User) session.getAttribute("loginUser");
 	    <% } else { %>
 	    	<div class=login-message>
 		        <h2 class=login-failure-message>ログインに失敗しました</h2>
-		        <a href="/docoTsubu/" class=top-back-button>TOPへ</a>
+		        <a href="/docoTsubu/" class=top-back-button>トップへ</a>
 	    	</div>
 	    <% } %>
     </main>
