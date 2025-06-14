@@ -30,23 +30,27 @@ String errorMsg = (String) request.getAttribute("errorMsg");
 		            <input type="submit" value="つぶやく" class=mutter-post-button>
 		        </form>
 		    </div>
-		    <div class=button-container>
-				<a href="/docoTsubu/Main" class=update-button>更新</a>
-		    </div>
+		    <% if(mutterList != null && !mutterList.isEmpty()) { %>
+			    <div class=button-container>
+					<a href="/docoTsubu/Main" class=update-button>更新</a>
+			    </div>
+		    <% } %>
 		    <div class=mutter-list>
 		        <% if(errorMsg != null) { %>
 		            <p class=no-mutter><%= errorMsg %></p>
 		        <% } %>
-		        <% if (mutterList != null) {%>
-		            <% for(Mutter mutter : mutterList) { %>
+		        <% if (mutterList != null && !mutterList.isEmpty()) { %>
+            		<% for(Mutter mutter : mutterList) { %>
 		                <div class="mutter-item">
-			                <span class="mutter-username"><%= mutter.getUserName() %></span>
-			                <span class="mutter-separator">:</span>
-			                <span class="mutter-text"><%= mutter.getText() %></span>
-            			</div>
+		                    <span class="mutter-username"><%= mutter.getUserName() %></span>
+		                    <span class="mutter-separator">:</span>
+		                    <span class="mutter-text"><%= mutter.getText() %></span>
+		                </div>
 		            <% } %>
-		        <% } else { %>
+		        <% } else if (mutterList != null && mutterList.isEmpty()) { %>
 		            <p>つぶやきがありません。</p>
+		        <% } else { %>
+		            <p>つぶやきデータを取得できませんでした。</p>
 		        <% } %>
 			</div>
         </main>

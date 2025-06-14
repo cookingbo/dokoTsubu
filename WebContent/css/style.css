@@ -214,7 +214,7 @@ main{
 }
 
 .button-container{
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     text-align: right;
     /* height/line-height は中の要素に合わせて調整が必要な場合があります */
@@ -242,7 +242,7 @@ main{
 }
 
 .mutter-list{
-    width: 50%;
+    width: 40%;
     padding-top: 10px;
     margin: 0 auto;
     text-align: center;
