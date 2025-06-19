@@ -24,7 +24,7 @@ public class MutterDAO {
 			conn = DriverManager.getConnection(JDBC_URL,DB_USER,DB_PASS);
 
 			// SELECT文の準備
-			String sql = "SELECT ID,NAME,TEXT FROM MUTTERS ORDER BY ID DESC";
+			String sql = "SELECT ID,NAME,TEXT FROM MUTTER ORDER BY ID DESC";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SELECTを実行
@@ -66,7 +66,7 @@ public class MutterDAO {
 			conn = DriverManager.getConnection(JDBC_URL,DB_USER,DB_PASS);
 
 			// INSERT文の準備（idは自動連番なので指定しなくてよい）
-			String sql = "INSERT INTO MUTTERS(NAME, TEXT) VALUES(?, ?)";
+			String sql = "INSERT INTO MUTTER(NAME, TEXT) VALUES(?, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			// INSERT文中の「?」に使用する値を設定し、SQLを完成
 			pStmt.setString(1, mutter.getUserName());
